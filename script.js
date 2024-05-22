@@ -31,12 +31,12 @@ class TvSerie extends Movie {
 }
 
 // Map
-const classMedia = media.map(m => {
-    const { title, year, genre, rating, type, seasons } = m;
+const classMedia = media.map(({ title, year, genre, rating, type, seasons }) => {
     if (type === 'movie') {
-        m = new Movie(title, year, genre, rating, type);
+        return new Movie(title, year, genre, rating, type);
     } else {
-        m = new TvSerie(title, year, genre, rating, type, seasons);
+        return new TvSerie(title, year, genre, rating, type, seasons);
     }
-    return m;
 });
+
+// Funzioni
