@@ -39,10 +39,10 @@ const classMedia = media.map(({ title, year, genre, rating, type, seasons }) => 
     }
 });
 
-// Funzioni
-const getAverageRaiting = (list, genre, type = 'movie') => {
+// Funzione per la media dei voti
+const getAverageRaiting = (list, genre) => {
     const genreMedia = list.filter(l => {
-        if (l.genre.toLowerCase() === genre.toLowerCase() && l.type === type) return true
+        if (l.genre.toLowerCase() === genre.toLowerCase()) return true
     });
 
     const totRaiting = genreMedia.reduce((sum, { rating }) => {
@@ -51,3 +51,32 @@ const getAverageRaiting = (list, genre, type = 'movie') => {
 
     return genreMedia.length ? totRaiting / genreMedia.length : 'Media non disponibile';
 };
+
+console.log(getAverageRaiting(classMedia, 'fantasia'));
+
+// Funzione per la lista dei gemeri
+const getAllGenres = (list) => {
+
+    const allGenres = list.reduce((result, l) => {
+        if (!result.includes(l.genre)) result.push(l.genre);
+        return result
+    }, [])
+
+    return allGenres;
+};
+
+console.log(getAllGenres(classMedia));
+
+
+// Funzione che filtri i film in base ad un genere passato come argomento e ne ritorni un array con all'interno il risultato della funzione toString() di ogni film.
+const getFilteredMedia = (list, genre) => {
+    const filteredMedia = list.reduce((result, l) => {
+        if (l.genre.toLowerCase() === genre.toLowerCase()) result.push(l.toString());
+        return result;
+    }, []);
+
+    return filteredMedia;
+};
+
+console.log(getFilteredMedia(classMedia, 'crime'));
+
