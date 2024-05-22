@@ -68,7 +68,7 @@ class TvSerie extends Movie {
 
     // Funzione toString TvSerie
     toString() {
-        return (`${this.getTitle()} è una serie tv di genere ${this.getGenre()}. La prima stagione è stata rilasciato nel ${this.getYear()} ed in totale sono state prodotte ${this.getSeasons()} stagioni. Ha un voto di ${this.getRating()}`)
+        return (`${this.getTitle()} è una serie tv di genere ${this.getGenre()}. La prima stagione è stata rilasciato nel ${this.getYear()} ed in totale sono state prodotte ${this.#seasons} stagioni. Ha un voto di ${this.getRating()}`)
     }
 
     // Funzioni Get
