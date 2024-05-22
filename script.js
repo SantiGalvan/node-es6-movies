@@ -40,3 +40,14 @@ const classMedia = media.map(({ title, year, genre, rating, type, seasons }) => 
 });
 
 // Funzioni
+const getAverageRaiting = (list, genre, type = 'movie') => {
+    const genreMedia = list.filter(l => {
+        if (l.genre.toLowerCase() === genre.toLowerCase() && l.type === type) return true
+    });
+
+    const totRaiting = genreMedia.reduce((sum, { rating }) => {
+        return sum = rating++;
+    }, 0);
+
+    return genreMedia.length ? totRaiting / genreMedia.length : 'Media non disponibile';
+};
