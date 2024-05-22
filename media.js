@@ -2,21 +2,21 @@ const media = [
     {
         title: "Il Signore degli Anelli: La Compagnia dell'Anello",
         year: 2001,
-        genre: "Fantasia, Avventura",
+        genre: "Fantasia",
         rating: 8.8,
         type: "movie",
     },
     {
         title: "Il Padrino",
         year: 1972,
-        genre: "Gangster, Drammatico",
+        genre: "Gangster",
         rating: 9.2,
         type: "movie",
     },
     {
         title: "Breaking Bad",
         year: 2008,
-        genre: "Crime, Drammatico",
+        genre: "Crime",
         rating: 9.5,
         type: "tv",
         seasons: 5,
@@ -24,7 +24,7 @@ const media = [
     {
         title: "Game of Thrones",
         year: 2011,
-        genre: "Fantasy, Drammatico",
+        genre: "Fantasia",
         rating: 9.2,
         type: "tv",
         seasons: 8,
@@ -32,7 +32,7 @@ const media = [
     {
         title: "La Principessa Mononoke",
         year: 1997,
-        genre: "Animazione, Fantasy, Avventura",
+        genre: "Animazione",
         rating: 8.3,
         type: "movie",
     },
@@ -76,7 +76,7 @@ const media = [
     {
         title: "Friends",
         year: 1994,
-        genre: "Comedy",
+        genre: "Commedia",
         rating: 8.9,
         type: "tv",
         seasons: 10
